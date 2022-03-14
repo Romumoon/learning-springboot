@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.romumu.course.entities.User;
-import com.romumu.course.respositories.UserRepository;
+import com.romumu.course.repositories.UserRepository;
 
 @Configuration
 @Profile("test")
