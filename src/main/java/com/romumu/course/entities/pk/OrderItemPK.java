@@ -11,9 +11,9 @@ import com.romumu.course.entities.Order;
 import com.romumu.course.entities.Product;
 
 @Embeddable
-public class OrderItemPK implements Serializable{
+public class OrderItemPK implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
@@ -34,6 +34,7 @@ public class OrderItemPK implements Serializable{
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(order, product);
@@ -49,6 +50,4 @@ public class OrderItemPK implements Serializable{
 		OrderItemPK other = (OrderItemPK) obj;
 		return Objects.equals(order, other.order) && Objects.equals(product, other.product);
 	}
-	
-	
 }
