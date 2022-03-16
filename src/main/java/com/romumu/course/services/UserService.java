@@ -53,6 +53,9 @@ public class UserService {
 			updateData(entity, obj);
 			return repository.save(entity);
 		}
+		catch(EntityNotFoundException e){
+			throw new ResourceNotFoundException(id);
+		}
 		catch(LazyInitializationException e){
 			throw new ResourceNotFoundException(id);
 		}
